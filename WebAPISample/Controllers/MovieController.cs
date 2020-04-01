@@ -76,7 +76,7 @@ namespace WebAPISample.Controllers
         public IActionResult Delete(int id)
         {
             // Delete movie from db logic
-            movie = _context.Movies.Find(id);
+            var movie = _context.Movies.Find(id);
 
             if (movie == null)
             {
