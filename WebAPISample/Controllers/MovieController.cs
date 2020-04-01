@@ -85,7 +85,7 @@ namespace WebAPISample.Controllers
 
             _context.Movies.Remove(movie);
             _context.SaveChangesAsync();
-            return Ok();
+            return Ok(_context.Movies);
         }
     }
 }

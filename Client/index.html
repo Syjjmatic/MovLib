@@ -3,29 +3,42 @@
 <head>
     <title>Movie Library</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="bootstrap.min.css">
 </head>
 <body>
 
-<header>
-  <h1>Movie Library</h1>
-</header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Movie Library</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
 
-<form id="my-form">
-    <input type="text" name="title" placeholder="Title" />
-    <input type="text" name="director" placeholder="Director" />
-    <input type="text" name="genre" placeholder="Genre" />
-    <button type="submit">Submit</button>
+  <br><br>
+
+<form id="my-form" class="form-group">
+    <label class="col-form-label" for="inputDefault"><h3>Add Movie</h3></label>
+    <input type="text" class="form-control" name="title" placeholder="Title" />
+    <input type="text" class="form-control" name="director" placeholder="Director" />
+    <input type="text" class="form-control" name="genre" placeholder="Genre" />
+    <br><br>
+    <button type="submit" class="btn btn-outline-primary">Submit</button>
 </form>
 
 <br><br>
 
-<table id="movieTable">
+<table class="table table-hover">
   <thead>
-    <td><h3>Title</h3></td>
-    <td><h3>Director</h3></td>
-    <td><h3>Genre</h3></td>
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col">Director</th>
+      <th scope="col">Genre</th>
+      <th scope="col"></th>
+    </tr>
   </thead>
   <tbody id="movies">
+    <tr class="table-dark">
+    </tr>
   </tbody>
 </table>
 
