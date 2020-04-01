@@ -2,7 +2,8 @@
     function processForm( e ){
         var dict = {
         	Title : this["title"].value,
-        	Director: this["director"].value
+        	Director: this["director"].value,
+          Genre: this["genre"].value
         };
 
         $.ajax({
@@ -12,7 +13,8 @@
             contentType: 'application/json',
             data: JSON.stringify(dict),
             success: function( data, textStatus, jQxhr ){
-                $('#response pre').html( data );
+              $("#my-form input[type='text']").val('');
+              alert("Added movie!");
             },
             error: function( jqXhr, textStatus, errorThrown ){
                 console.log( errorThrown );
